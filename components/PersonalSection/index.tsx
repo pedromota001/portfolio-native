@@ -1,10 +1,8 @@
-import { useNavigation } from '@react-navigation/native';
 import { useRouter } from 'expo-router';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
 const PersonalSection = () => {
-    const navigation = useNavigation();
     const router = useRouter();
     return(
         <View style={styles.divPersonal}>
@@ -20,6 +18,20 @@ const PersonalSection = () => {
             <TouchableOpacity activeOpacity={0.6}style={styles.buttonGame} onPress={() => router.push('/jogoSenha')}>
                 <Text style={styles.textButton}>Ir para o Jogo da Senha</Text>
             </TouchableOpacity>
+            <View style={styles.viewButtons}>
+                <TouchableOpacity activeOpacity={0.6}style={styles.buttonGame} onPress={() => router.push('/sobre')}>
+                    <Text style={styles.textButton}>Sobre</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity activeOpacity={0.6}style={styles.buttonGame} onPress={() => router.push('/projetos')}>
+                    <Text style={styles.textButton}>Projetos</Text>
+                </TouchableOpacity>     
+
+                <TouchableOpacity activeOpacity={0.6}style={styles.buttonGame} onPress={() => router.push('/experiencia')}>
+                    <Text style={styles.textButton}>Experiência</Text>
+                </TouchableOpacity>
+            </View>                
+        
         </View>
         
     )
@@ -55,6 +67,11 @@ const PersonalSection = () => {
         color: '#fff',
         fontWeight: 600
     },
+    viewButtons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 25
+    }
     });
 
 

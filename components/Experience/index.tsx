@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native"
+import { ScrollView, StyleSheet, Text, View } from "react-native"
 
 const experiences = [
     {
@@ -7,13 +7,20 @@ const experiences = [
         period: '2024 - Atualmente',
         description: 'Atuação no desenvolvimento de projeto em Mendix, realizando integrações com sistemas externos e contribuindo ativamente tanto no frontend quanto no backend.',
         techs: ['Typescript', 'Mendix', 'Git', 'PostgreSQL', 'API REST']
+    },
+    {
+        title: 'UNICAP',
+        role: 'Estudante',
+        period: '2023.1 - 2026.2',
+        description: 'Graduando em Ciência da Computação na UNICAP, buscando evoluir continuamente no entendimento de conceitos fundamentais da computação e no desenvolvimento de habilidades técnicas por meio de projetos, estudos e práticas em diversas áreas da tecnologia.',
+        techs: ['Lógica de programação', 'Estrutura de dados', 'Trabalho em equipe', 'Banco de dados', 'Python', 'Java', 'C', 'React', 'Sistemas operacioanais', 'IA']
     }
 ]
 
 
 const Experience = () => {
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.title}>Experiências</Text>
             {experiences.map((exp, index) => (
                 <View key={index} style={styles.cardExp}>
@@ -28,7 +35,7 @@ const Experience = () => {
                 </View>
                 
             ))}
-        </View> 
+        </ScrollView> 
     )
 }
 

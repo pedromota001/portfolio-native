@@ -23,6 +23,9 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="jogoSenha" options={{ title: 'Jogo da Senha' }} />
+        <Stack.Screen name="sobre" options={{ title: 'Sobre' }} />
+        <Stack.Screen name="projetos" options={{ title: 'Projetos' }} />
+        <Stack.Screen name="experiencia" options={{ title: 'Experiência' }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
