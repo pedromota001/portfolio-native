@@ -47,20 +47,16 @@ export default function TabContainer() {
   const layout = useWindowDimensions();
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState<Route[]>([
-    { key: 'projects', title: 'Projetos' },
     { key: 'about', title: 'Sobre mim' },
     { key: 'contact', title: 'Contato' },
-    { key: 'experience', title: 'Experiência' },
     { key: 'certificates', title: 'Certificados' },
   ]);
 
   const renderScene = React.useMemo(
     () =>
       SceneMap({
-        projects: ProjectsRoute,
         about: AboutRoute,
         contact: ContactRoute,
-        experience: ExperienceRoute,
         certificates: CertificatesRoute,
       }),
     []
